@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from datetime import datetime as dt
 from django.template import Template, Context, loader
+from App.models import Curso
 
 def canejo(request):
     return HttpResponse("Hola Canejin")
@@ -35,5 +36,16 @@ def contexto(request):
 
     return HttpResponse(documento)
 
-def cursos(request):
-    return HttpResponse("Pagina cursos")
+def curso(request,nombre, numero):
+    curso = Curso(nombre=nombre, camada=int(numero))
+    curso.save
+    documento = f"Curso: {curso.nombre}<br>Camada:  {curso.camada}"
+    return HttpResponse(documento)
+
+def index(request):
+    
+    plantilla = loader.get_template('index.html')
+    documento = plantilla.render()
+    loader.get_template('index.html')
+
+    return HttpResponse(documento)
