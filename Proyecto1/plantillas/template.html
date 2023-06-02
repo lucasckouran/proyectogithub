@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template nuevo</title>
+    <style>
+        body {
+        background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+        }
+        
+        h1 {
+        text-align: center;
+        }
+        
+        .story {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333333;
+        background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>CANEJO!</h1>
+<div class="story">
+    <h2>La historia de {{nombre}}</h2>
+    {% for nota in notas %}
+        {% if nota <= 6 %}
+        <p style="color:darkred"> La nota es MALA: {{ nota }} </p>
+        {% else %}
+            <p> La nota es Buena: {{ nota }}</p>
+        {% endif %}
+    {% endfor %}
+
+    <p>Érase una vez un gato llamado Canejo. Era un gato naranja muy travieso y juguetón que vivía en las calles de Buenos Aires.</p>
+    
+    <p>Canejo estaba perdido y buscaba desesperadamente un hogar. Un día, un joven llamado Lucas lo encontró mientras paseaba por el barrio de Devoto. Se compadeció de Canejo y decidió llevarlo a su departamento.</p>
+    
+    <p>Desde el primer momento, Canejo y Lucas se hicieron inseparables. Canejo encontró en Lucas a su mejor amigo y compañero de aventuras. Juntos jugaron, se divirtieron y exploraron cada rincón del departamento.</p>
+    
+    <p>Lucas cuidaba de Canejo con mucho amor y cariño. Le daba comida deliciosa, juguetes para entretenerse y un lugar cálido para descansar. Canejo, a su vez, le devolvía el cariño con ronroneos y tiernos maullidos.</p>
+    
+    <p>Con el tiempo, Canejo se adaptó por completo a su nuevo hogar. Disfrutaba de largas siestas en el sofá, persiguiendo hilos por toda la casa y explorando cada rincón curioso.</p>
+    
+    <p>Lucas y Canejo vivieron muchos momentos felices juntos en su departamento en Devoto. Canejo ya no estaba perdido, había encontrado su lugar en el mundo y una familia que lo amaba incondicionalmente.</p>
+    
+    <p>Y así, Canejo el gato naranja vivió felizmente el resto de sus días al lado de Lucas en Devoto, Buenos Aires.</p>
+</div>
+
+</body>
+</html>
+
